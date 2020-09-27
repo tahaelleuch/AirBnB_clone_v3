@@ -9,3 +9,8 @@ body .container {
     max-width: 1000px;
     margin: 30px auto;
 }
+input[type=checkbox] {
+    position: relative;
+    top: 2px;
+    margin-right: 10px
+}
