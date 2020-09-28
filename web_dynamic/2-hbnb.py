@@ -15,13 +15,13 @@ app = Flask(__name__)
 
 @app.teardown_appcontext
 def close_db(error):
-    """ Remove the current SQLAlchemy Session """
+    """Remove the current SQLAlchemy Session"""
     storage.close()
 
 
 @app.route('/2-hbnb/', strict_slashes=False)
 def hbnb():
-    """ HBNB is alive! """
+    """HBNB is alive!"""
     states = storage.all(State).values()
     states = sorted(states, key=lambda k: k.name)
     st_ct = []
@@ -43,5 +43,5 @@ def hbnb():
 
 
 if __name__ == "__main__":
-    """ Main Function """
+    """Main Function"""
     app.run(host='0.0.0.0', port=5000)
